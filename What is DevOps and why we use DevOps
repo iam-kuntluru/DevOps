@@ -1,0 +1,113 @@
+DevOps is a set of practicies, cultrual philosophies, and tools that aim to shorten the software develpment lifecycle and prvoide continuous devlivery with high software quality.
+Devops is a process of improving the application delivery by ensuring there is proper automation with good quality of application and ensuring continuous monitoring and continuous testing.
+
+In simple terms:
+DevOps = Development + Operations
+Its all about getting developers (who wrote the code) and IT operations (who deploy and maintain the software) to work together more closely instead of Silos (working seperately)
+
+The problems Before DevOps (before 10 years):-
+Developers Build code and toss it to Operations team. [ The goal is to devliver the application from Developer system to customer ]
+
+1. SYSTEM ADMIN will create a server (VMware, Xen)
+
+2. BUILD RELEASE ENGINEER will deploy the application to server.
+
+3. SERVER ADMIN will create the APP SERVER.
+
+Suppose all of this porcess took 10 days, to complete this in shorter days and to automate the manual porcess the word/world DevOps is emerged.
+
+SCENE 1 – Life Before DevOps
+
+Imagine we’re in 2010. You’re part of a company building an online ticket booking system.
+
+Development Side (Dev Team)
+The dev team works in their own environment (their laptop or internal dev servers).
+They write a new feature: “Book Multiple Tickets”.
+They test it locally — it works perfectly on their machine.
+Once ready, they package the code (ZIP, WAR, or JAR file) and send it to the 
+Operations team with a note:
+ “Here’s the build. Please deploy to Production.”
+
+
+Operations Side (Ops Team)
+Ops team receives the package. They are experts in servers, networking, and infrastructure, not in coding.
+They manually copy the build to the production server, update configs, restart services.
+Then… It crashes.
+The Problem (“Throw Over the Wall”)
+
+Dev says: “It works on my machine, so the problem must be with Ops.”
+Ops says: “Your code is missing dependencies. How do we fix it?”
+
+They go back and forth — late-night calls, angry managers, missed deadlines.
+Sometimes, deployments took hours or even days because of all the manual steps and communication gaps.
+As a result, companies avoided frequent deployments — maybe once a month or quarterly.
+
+
+SCENE 2 – Enter DevOps
+
+Now, Dev and Ops are not separate teams throwing things over a wall. They work together and share responsibility for both development and operations.
+
+What Changes?
+Automation Replaces Manual Steps
+When the Dev finishes the “Book Multiple Tickets” feature, they push it to Git.
+
+A CI/CD pipeline automatically:
+Builds the application with all dependencies.
+Runs automated tests.
+Packages it into a ready-to-deploy container or artifact.
+Deploys it to staging and then to production automatically.
+Monitoring & Feedback
+Once deployed, monitoring tools like Prometheus, Grafana, New Relic watch performance and errors.
+If something fails, alerts go to the same team — no more "not my job" mentality.
+Deployment Frequency Increases
+
+From monthly releases → to multiple releases per day safely.
+Small changes = small risks = faster recovery if something breaks.
+
+Where is the Operations Team Now?
+People often ask:
+“If DevOps does infra work too, then what happened to the Ops team?”
+Answer: Ops didn’t disappear — they evolved.
+Before: Ops only managed servers, networking, deployments.
+Now: Ops engineers work with developers on automation, cloud infrastructure, monitoring, and reliability.
+They are often called SREs (Site Reliability Engineers) or Platform Engineers.
+They still handle infra, but now:
+They write Infrastructure as Code (Terraform, Ansible).
+They create Kubernetes clusters.
+They set up observability and scaling rules.
+DevOps is not just “developers doing infra work” — it’s breaking the wall between development and operations.
+It makes the team accountable from writing code → deploying → maintaining → improving.
+Operations still exist — but they’re now part of a continuous delivery system, not a separate ticket-based service.
+
+
+Common DevOps Practicies:-
+1. CI/CD (Continuous Integration and Continuous Delivery):- Automatically Building, testing and deploying code.
+2. Infrastructure as Code (IaC):- Managing Infrastructure as with code (eg. using tools like Terraform or Ansible)
+3. Monitoring and Logging:- Keeping an eye on systems in real time (eg. with Prometheus, ELK stack)
+4. Automation: Using tools like Jenkins, Gitlab CI or GitHUB Actions to automate the Pipeline.
+5. Containerization and Orchestration: Using Docker and Kubernetes to manage applications in isolated environments.
+
+
+Software Deveopment Lifecycle (SDLC):-
+
+SCLC is essential wheather you are in deployment, DevOps or any IT role.
+
+SDLC is a structured orocess used to build software efficiently with high quality and in a predictable timeline.
+
+Planning + Requirements
+        ||
+Defining
+        ||
+Designing
+        ||
+Building       -----
+        ||          |
+Testing             | - Automation
+        ||          |
+Deploy         -----     
+
+
+DevOps engineer involved in to automate the three stage (Building, Testing and Deployment)
+
+DevOps engiener ensures that software is devlivered faster, safer and more reliably through automation and collaboration.
+
