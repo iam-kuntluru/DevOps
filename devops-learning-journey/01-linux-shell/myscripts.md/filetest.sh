@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-read -p "Enter file path: " file
+read -p "Enter the file path: " file
 
 if [ -e "$file" ]; then
   echo "✅ File exists."
