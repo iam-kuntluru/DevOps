@@ -1,0 +1,42 @@
+---
+- name: Deploy Nginx webserver on EC2
+  hosts: localhost
+  become: yes
+  connection: local
+
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+
+    - name: Install Nginx
+      apt:
+        name: nginx
+        state: present
+
+    - name: Create website directory
+      file:
+        path: /var/www/html
+        state: directory
+        mode: '0755'
+
+    - name: Deploy sample index.html
+      copy:
+        dest: /var/www/html/index.html
+        content: |
+          <!DOCTYPE html>
+          <html>
+          <head>
+              <title>Welcome to My EC2 Web Server</title>
+          </head>
+          <body style="font-family: Arial; text-align: center; margin-top: 50px;">
+              <h1>Hello from Ansible!</h1>
+              <p>This page is served by Nginx running on EC2.</p>
+          </body>
+          </html>
+
+    - name: Ensure Nginx is started and enabled
+      service:
+        name: nginx
+        state: started
+        enabled: yes
