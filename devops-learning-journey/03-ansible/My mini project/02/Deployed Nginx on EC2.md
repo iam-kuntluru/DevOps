@@ -7,7 +7,7 @@
   sudo apt update  # To update all the packages
   sudo apt install ansible
   ```
-✅ Then created an inventory file to let my machine know where to install the application.
+✅ Then created an inventory.ini file to let my machine know where to install the application.
   ```
   [webserver]
   ec2-public-ip ansible_user=ubuntu ansible_ssh_private_key_file=/path/to/key.pem 
@@ -16,7 +16,7 @@
 ✅ Written playbook.YAML and executed it on the instance to deploy the Jenkins on cloud. (see playbook.yaml file for code)
 
 ```
-ansible-playbook -i localhost, playbook.yaml
+ansible-playbook -i inventory.ini playbook.yaml
 ```
 
 <img width="1132" height="445" alt="{023D664D-DD68-4C74-B451-0524EBB68A7E}" src="https://github.com/user-attachments/assets/0b8d4a12-7d2e-46e3-b5f9-769515c4352d" />
