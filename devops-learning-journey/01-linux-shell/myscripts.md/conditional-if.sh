@@ -8,7 +8,7 @@
 #
 # Date:27th June
 # ################################
-#
+
 echo "Enter first number"
 read num1
 
