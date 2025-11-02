@@ -22,6 +22,8 @@ echo "hi"
 
 - Scalability and flexibility
 
+Easily and quickly scale the systems you automate through a modular design that supports a large range of operating systems, cloud platforms, and network devices.
+
 ## 💻 Example: Traditional Script vs. Ansible Playbook
 
 ### Bash Script
@@ -37,18 +39,10 @@ fi
 ```
 
 ### Ansible Playbook
-## 💻 Example: Traditional Script vs. Ansible Playbook
-
-### Bash Script
-```bash
-#!/bin/bash
-if [ $(id -u) -eq 0 ]; then
-  username=johndoe
-  read -s -p "Enter password: " password
-  useradd -m -p $password $username && echo "User added!"
-else
-  echo "Run as root"
-fi
 ```
-
-Easily and quickly scale the systems you automate through a modular design that supports a large range of operating systems, cloud platforms, and network devices.
+- hosts: localhost
+  tasks:
+    - name: Add a user
+      user:
+        name: johndoe
+```
